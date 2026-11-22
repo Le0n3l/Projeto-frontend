@@ -1,24 +1,47 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HRMasters</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
     <div class="container">
         <img src="logo-3-hrmasters.png" alt="HRMasters" class="logo">
+        <p class="slogan">Pessoas em primeiro lugar, dados no lugar certo.</p>
         <h1>Funcionários</h1>
+
         <input type="text" id="nomeInput" placeholder="Nome">
+        <input type="text" id="empresaInput" placeholder="Empresa Cliente">
         <input type="text" id="cargoInput" placeholder="Cargo">
         <input type="text" id="emailInput" placeholder="E-mail">
         <input type="text" id="telefoneInput" placeholder="Telefone">
-        <input type="text" id="salarioInput" placeholder="Salário">
-        <button id="addBtn">Adicionar Funcionário</button>
-        <ul id="lista">
+        <input type="number" id="salarioInput" step="0.01" placeholder="Salário">
 
-        </ul>
+        <select id="tipoInput">
+            <option value="novo">Novo Contratado</option>
+            <option value="promocao">Promoção / Reajuste</option>
+            <option value="atualizacao">Atualização</option>
+        </select>
+
+        <button id="addBtn">Adicionar Funcionário</button>
+
+        <div class="filtro-area">
+            <select id="filtroStatus">
+                <option value="ativo">Ativos</option>
+                <option value="arquivado">Arquivados (Desligados)</option>
+                <option value="todos">Todos</option>
+            </select>
+        </div>
+
+        <ul id="lista"></ul>
+
+        <p class="lgpd">Dados protegidos em conformidade com a LGPD.</p>
     </div>
 </body>
 </html>

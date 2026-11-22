@@ -12,7 +12,7 @@ body {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 500px;
+    width: 520px;
     margin: 20px;
     text-align: center;
 }
@@ -21,18 +21,25 @@ body {
     width: 200px;
 }
 
+.slogan {
+    margin: 4px 0 16px;
+    font-size: 0.9rem;
+    color: #334155;
+}
+
 h1 {
     font-family: "Nunito", Arial, sans-serif;
     margin-bottom: 20px;
 }
 
-input {
+input, select {
     padding: 10px;
-    width: calc(100%);
+    width: 100%;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
+    font-family: inherit;
 }
 
 button {
@@ -43,10 +50,15 @@ button {
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
+    font-weight: 600;
 }
 
 button:hover {
     background: #0b5c56;
+}
+
+.filtro-area {
+    margin-top: 15px;
 }
 
 ul {
@@ -59,23 +71,46 @@ li {
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
+    border-left: 5px solid #334155;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 8px;
+    text-align: left;
+}
+
+li.tipo-novo {
+    border-left-color: #F97066;
+}
+
+li.tipo-promocao {
+    border-left-color: #D4A017;
+}
+
+.acoes {
+    display: flex;
     gap: 5px;
 }
 
-li button {
+.btn-editar {
     background: #D4A017;
     padding: 5px 10px;
     width: auto;
 }
 
-li button:hover {
-    background: #b88a12;
+.btn-arquivar {
+    background: #334155;
+    padding: 5px 10px;
+    width: auto;
 }
 
 li.arquivado {
-    color: #888;
+    opacity: 0.65;
     text-decoration: line-through;
+}
+
+.lgpd {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #555;
 }
