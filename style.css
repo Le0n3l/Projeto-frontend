@@ -1,0 +1,81 @@
+body {
+    font-family: "Source Sans 3", Arial, sans-serif;
+    background-color: #FAF7F2;
+    color: #334155;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 500px;
+    margin: 20px;
+    text-align: center;
+}
+
+.logo {
+    width: 200px;
+}
+
+h1 {
+    font-family: "Nunito", Arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    width: calc(100%);
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 15px;
+    background: #0F766E;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background: #0b5c56;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #FAF7F2;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+li button {
+    background: #D4A017;
+    padding: 5px 10px;
+    width: auto;
+}
+
+li button:hover {
+    background: #b88a12;
+}
+
+li.arquivado {
+    color: #888;
+    text-decoration: line-through;
+}
