@@ -6,7 +6,7 @@ var salario = document.getElementById("salarioInput")
 var btn = document.getElementById("addBtn")
 var lista = document.getElementById("lista")
 
-var editando = null // guarda o funcionário que está sendo editado
+var editando = null
 
 function limparCampos(){
     nome.value = ""
@@ -24,7 +24,6 @@ btn.addEventListener("click", function(){
     if (nome.value == "" || cargo.value == "" || email.value == "" || telefone.value == "" || salario.value == ""){
         alert("Preencha todos os campos!")
     } else if (editando != null){
-        // Atualizar
         editando.f.nome = nome.value
         editando.f.cargo = cargo.value
         editando.f.email = email.value
@@ -35,7 +34,6 @@ btn.addEventListener("click", function(){
         btn.innerHTML = "Adicionar Funcionário"
         limparCampos()
     } else {
-        // Criar
         var f = {
             nome: nome.value,
             cargo: cargo.value,
@@ -58,7 +56,6 @@ btn.addEventListener("click", function(){
         lista.appendChild(li);
         limparCampos()
 
-        // Editar: coloca os dados nos campos
         btnEdit.addEventListener("click", function(){
             editando = { f: f, span: span }
             nome.value = f.nome
@@ -69,7 +66,6 @@ btn.addEventListener("click", function(){
             btn.innerHTML = "Salvar Alterações"
         })
 
-        // Excluir: remove o funcionário da lista
         btnDel.addEventListener("click", function(){
             if (editando != null && editando.f == f){
                 editando = null
